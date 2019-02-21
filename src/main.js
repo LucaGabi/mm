@@ -41,7 +41,7 @@ export class MM {
          * Input options ?
          */
         if (this.options.input) {
-            this.input = {
+            this.input  = {
                 el: document.querySelector(this.options.input.el),
                 multiple: this.options.input.multiple
             };
@@ -81,7 +81,7 @@ export class MM {
             mutations: {
                 resetSelected(state) {
                     state.selected = null;
-                },
+                 },
                 addSelected(state, file) {
                     if (state.options.input.multiple) {
                         if (!Array.isArray(state.selected)) {
@@ -153,18 +153,18 @@ export class MM {
     }
 
     onSelect(e) {
-        if (this.input) {
-            if (e.selected) {
-                if (this.input.multiple) {
-                    let selected = e.selected.map(element => { return element.path; });
-                    this.input.el.value = selected.join("\n");
-                } else {
-                    this.input.el.value = e.selected.path;
-                }
-            } else {
-                this.input.el.value = '';
-            }
-        }
+        // if (this.input ) {
+        //     if (e.selected) {
+        //         if (this.input.multiple) {
+        //             let selected = e.selected.map(element => { return element.path; });
+        //             this.input.el.value = selected.join("\n");
+        //         } else {
+        //             this.input.el.value = e.selected.path;
+        //         }
+        //     } else {
+        //         this.input.el.value = '';
+        //     }
+        // }
 
         if (this.options.onSelect)
             this.options.onSelect(e);

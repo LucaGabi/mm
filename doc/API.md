@@ -12,6 +12,14 @@ This API call should return an array of files (object) with the following proper
 - `extension` : e.g. `jpg`
 - `filename` : e.g. `image`
 
+{
+    type:'dir/file',
+    path:'',
+    basename:'',
+    extension:'',
+    filename:''
+}
+
 ## download
 - Method : GET
 - Params :
